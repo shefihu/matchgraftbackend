@@ -1,0 +1,60 @@
+# Byte-compiled, optimized, and DLL files
+*.py[cod]
+*$py.class
+
+# Cache
+__pycache__/
+.cache
+.pytest_cache/
+.mypy_cache/
+
+# Celery (Python's asynchronous task queues framework)
+celerybeat-schedule
+
+# Code editor (IntelliJ & VSCode)
+.vscode/
+
+# Database-related
+*.sqlite3
+*.db
+postgres-data
+
+# Distributions package
+.Python
+build/
+eggs/
+sdist/
+wheels/
+
+# Dotenvs
+.env
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Log Files
+*.log
+
+# PyInstaller
+*.manifest
+*.spec
+
+# SageMath (Python#s open-source mathematics framework)
+*.sage.py
+
+# Scraping tool
+.scrapy
+
+# Tests and coverage reports:
+.tox/
+coverage/**
+coverage.*
+cov.*
+*.cover
+
+
+# Virtual Environment & packages
+.python-version
+.venv
+venv/

@@ -1,0 +1,50 @@
+{
+    "disease_status": {
+        "is_malignant": true,
+        "relapse_count": 0,
+        "remission": "Not Applicable",
+        "underlying_disease": ""
+    },
+    "easix_score": {
+        "creatinine": 0,
+        "ldh": 0,
+        "thrombocytes": 0
+    },
+    "general": {
+        "age": "",
+        "is_male": true,
+        "is_prior_autologous_transplant": true,
+        "pseudonym": ""
+    },
+    "hla_types": {
+        "hla_a1": "",
+        "hla_a2": "",
+        "hla_b1": "",
+        "hla_b2": "",
+        "hla_c1": "",
+        "hla_c2": "",
+        "hla_dpa11": "",
+        "hla_dpa12": "",
+        "hla_dpb11": "",
+        "hla_dpb12": "",
+        "hla_dqa11": "",
+        "hla_dqa12": "",
+        "hla_dqb11": "",
+        "hla_dqb12": "",
+        "hla_drb11": "",
+        "hla_drb12": ""
+    },
+    "infection_status": {
+        "is_cmv": true,
+        "is_ebv": true,
+        "is_hhv6_dna": true,
+        "is_hhv6_igg": true
+    }
+}    }
+}}}  }
+}s_cmv": true,
+        "is_ebv": true,
+        "is_hhv6_dna": true,
+        "is_hhv6_igg": true
+    }
+}
