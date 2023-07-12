@@ -14,6 +14,7 @@ from src.schemas.inference import (
     InferenceResultPayload,
 )
 from src.utils import store_json_data
+from storage.dummy.cases import case_list
 
 
 router = fastapi.APIRouter(prefix="/case", tags=["Case"])
@@ -74,6 +75,7 @@ async def save_result(
         store_json_data(
             file_path=settings.STORAGE_JSON["cases"], json_content=case.model_dump()
         )
+        case_list.append(case.model_dump())
         return SaveInferenceResponse(is_saved=True if case else False)
     except Exception as err:
         raise HTTPException(status_code=fastapi.status.HTTP_400_BAD_REQUEST, detail=err)
