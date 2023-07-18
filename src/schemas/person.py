@@ -6,7 +6,7 @@ from src.schemas.info import (
     DiseaseStatus,
     HLATypes,
     InfectionStatus,
-    EASIXScore
+    EASIXScore,
 )
 
 
@@ -27,12 +27,12 @@ class DonorHLATypes(HLATypes):
         "Full-Compatibility",
         "Minor-Compatibility",
         "Major-Compatibility",
-        "Bidirectional-Incompatibility"
+        "Bidirectional-Incompatibility",
     ]
+
 
 class Donor(MatchGraftBaseModel):
     general: DonorGeneral
-    disease_status: DiseaseStatus
     hla_types: DonorHLATypes
     infection_status: InfectionStatus
     easix_score: EASIXScore

@@ -8,6 +8,7 @@ class General(MatchGraftBaseModel):
     age: str
     is_male: bool
     is_prior_autologous_transplant: bool
+    blood_group: Literal["A", "B", "O", "AB"]
 
 
 class DiseaseStatus(MatchGraftBaseModel):
@@ -17,7 +18,7 @@ class DiseaseStatus(MatchGraftBaseModel):
         "No - Remission",
         "Partial - Remission",
         "Complete - Remission",
-        "Not Applicable"
+        "Not Applicable",
     ]
     relapse_count: int | float
 
@@ -42,13 +43,16 @@ class HLATypes(MatchGraftBaseModel):
 
 
 class InfectionStatus(MatchGraftBaseModel):
-    is_cmv: bool
-    is_ebv: bool
-    is_hhv6_igg: bool
-    is_hhv6_dna: bool
+    is_cmv: bool | None
+    is_ebv: bool | None
+    is_hhv6_igg: bool | None
+    is_hhv6_dna: bool | None
 
 
 class EASIXScore(MatchGraftBaseModel):
     creatinine: int | float
+    creatinine_unit: Literal["mg", "dl"]
     ldh: int | float
+    ldh_unit: Literal["u", "l"]
     thrombocytes: int | float
+    thrombocytes_unit: Literal["nr. cells", "nl"]
