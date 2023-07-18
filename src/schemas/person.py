@@ -35,4 +35,3 @@ class Donor(MatchGraftBaseModel):
     general: DonorGeneral
     hla_types: DonorHLATypes
     infection_status: InfectionStatus
-    easix_score: EASIXScore
