@@ -6,14 +6,14 @@ from src.schemas.base import MatchGraftBaseModel
 class General(MatchGraftBaseModel):
     pseudonym: str
     age: str
-    is_male: bool
-    is_prior_autologous_transplant: bool
+    is_male: bool | None
+    is_prior_autologous_transplant: bool | None
     blood_group: Literal["A", "B", "O", "AB"]
 
 
 class DiseaseStatus(MatchGraftBaseModel):
     underlying_disease: str | None
-    is_malignant: bool
+    is_malignant: bool | None
     remission: Literal[
         "No - Remission",
         "Partial - Remission",
