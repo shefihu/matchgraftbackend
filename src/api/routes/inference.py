@@ -1,3 +1,4 @@
+from datetime import datetime
 from random import random
 
 import fastapi
@@ -13,9 +14,8 @@ from src.schemas.inference import (
     SaveInferenceResponse,
     InferenceResultPayload,
 )
-from src.utils import store_json_data
+from src.utils import store_json_data, format_datetime_to_iso
 from storage.dummy.cases import case_list
-
 
 router = fastapi.APIRouter(prefix="/case", tags=["Case"])
 
@@ -71,6 +71,7 @@ async def save_result(
                 "patient_pseudonym"
             ],
             total_donors=len(inference_result_payload.model_dump()["result"]),
+            created_at=format_datetime_to_iso(date_time=datetime.now()),
         )
         store_json_data(
             file_path=settings.STORAGE_JSON["cases"], json_content=case.model_dump()
