@@ -51,8 +51,33 @@ class InfectionStatus(MatchGraftBaseModel):
 
 class EASIXScore(MatchGraftBaseModel):
     creatinine: int | float
-    creatinine_unit: Literal["mg", "dl"]
+    creatinine_unit: Literal[
+        "mmol/l", "μmol/l", "mg/dl", "mg/100ml", "mg%", "mg/l", "μg/ml"
+    ]
     ldh: int | float
-    ldh_unit: Literal["u", "l"]
+    ldh_unit: Literal[
+        "nkat/l",
+        "μkat/l",
+        "nmol/(s•L)",
+        "μmol/(s•L)",
+        "U/L",
+        "IU/L",
+        "μmol/(min•L)",
+        "μmol/(h•L)",
+        "μmol/(h•mL)",
+    ]
     thrombocytes: int | float
-    thrombocytes_unit: Literal["nr. cells", "nl"]
+    thrombocytes_unit: Literal[
+        "10^9/L",
+        "G/L",
+        "Gpt/L",
+        "cells/L",
+        "10^3/μL",
+        "1000/μL",
+        "10^3/mm^3",
+        "1000/mm^3",
+        "K/μL",
+        "K/mm^3",
+        "cells/μL",
+        "cells/mm^3",
+    ]
